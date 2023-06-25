@@ -1,3 +1,4 @@
+import { data } from "@/app/data";
 import { Home, Library, Search } from "lucide-react";
 
 export function Sidebar () {
@@ -18,12 +19,9 @@ export function Sidebar () {
           </a>
         </nav>
         <nav className="mt-6 pt-6 border-t border-zinc-800 flex flex-col gap-3">
-          <a href="" className="text-sm text-zinc-400 hover:text-zinc-100"> Minhas Músicas</a>
-          <a href="" className="text-sm text-zinc-400 hover:text-zinc-100"> louvores</a>
-          <a href="" className="text-sm text-zinc-400 hover:text-zinc-100"> NerdHit</a>
-          <a href="" className="text-sm text-zinc-400 hover:text-zinc-100"> Em inglês 1</a>
-          <a href="" className="text-sm text-zinc-400 hover:text-zinc-100"> Para relaxar</a>
-          <a href="" className="text-sm text-zinc-400 hover:text-zinc-100"> Só mais uma</a>
+          {data.libary.map(name => (
+            <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">{name}</a>
+          ))}
         </nav>
       </aside>
     )
