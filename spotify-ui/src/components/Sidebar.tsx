@@ -6,15 +6,15 @@ export function Sidebar () {
         <nav className="space-y-5">
           <a href="" className="flex gap-3 items-center text-ms font-semibold text-zinc-200">
             <Home />
-            Home
+            Início
           </a>
           <a href="" className="flex gap-3 items-center text-ms font-semibold text-zinc-200">
             <Search />
-            Search
+            Procurar
           </a>
           <a href="" className="flex gap-3 items-center text-ms font-semibold text-zinc-200">
             <Library />
-            Your Library
+            A tua Biblioteca
           </a>
         </nav>
         <nav className="mt-6 pt-6 border-t border-zinc-800 flex flex-col gap-3">

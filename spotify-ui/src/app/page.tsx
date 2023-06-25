@@ -1,7 +1,6 @@
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Footer } from "@/components/Footer"
 import { Sidebar } from "@/components/Sidebar"
-
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { AlbumCard } from "@/components/AlbumCard"
 import { MusicCard } from "@/components/MusicCard"
 
@@ -19,7 +18,7 @@ export default function Home() {
               <ChevronRight />
             </button>
           </div>
-          <h1 className="font-semibold text-3xl mt-10">God Afternoon</h1>
+          <h1 className="font-semibold text-3xl mt-10">Reproduzido recentemente</h1>
           <div className="grid grid-cols-3 gap-4 mt-4">
             <AlbumCard /> 
             <AlbumCard /> 
@@ -28,7 +27,7 @@ export default function Home() {
             <AlbumCard /> 
             <AlbumCard /> 
           </div>
-          <h2 className="font-semibold text-2xl mt-10">Made for Fábio Junik</h2>
+          <h2 className="font-semibold text-2xl mt-10">Feito por Fábio Junik</h2>
           <div className="grid grid-cols-5 gap-4 mt-4">
             <MusicCard/>
             <MusicCard/>
