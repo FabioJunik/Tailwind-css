@@ -48,14 +48,14 @@ export const data: DataProps = {
             id: 5,
             title: "O Verbo",
             autor: "Clovis",
-            image: "/gabriela.jpg"
+            image: "/clovisverbo.jpeg"
         },
         {
             id: 6,
             title: "Deserto",
             autor: "Maria Marçal",
-            image: "/gabriela.jpg"
+            image: "/mariadeserto.jpeg"
         }
     ],
-    recentlyPlayed: [3,5,1,2]
+    recentlyPlayed: [3,5,1,2,4,6]
 }

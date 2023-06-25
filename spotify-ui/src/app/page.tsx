@@ -33,12 +33,9 @@ export default function Home() {
           </div>
           <h2 className="font-semibold text-2xl mt-10">Feito por Fábio Junik</h2>
           <div className="grid grid-cols-5 gap-4 mt-4">
-            <MusicCard />
-            <MusicCard />
-            <MusicCard />
-            <MusicCard />
-            <MusicCard />
-            <MusicCard />
+            {data.music.map(({autor, image, title})=> (
+              <MusicCard autor={autor} image={image} title={title}/>
+            ))}
           </div>
         </main>
       </div>
