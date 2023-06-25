@@ -1,16 +1,16 @@
 import { Footer } from "@/components/Footer"
 import { Sidebar } from "@/components/Sidebar"
 
-import { ChevronLeft, ChevronRight, Play } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { AlbumCard } from "@/components/AlbumCard"
 import { MusicCard } from "@/components/MusicCard"
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col">
-      <div className="flex flex-1">
+    <div className="h-screen grid grid-rows-[auto,84px]">
+      <div className="flex">
         <Sidebar />
-        <main className="flex-1 p-6 overflow-auto">
+        <main className="flex-1 p-6  max-h-[calc(100vh-84px)] overflow-auto">
           <div className="flex items-center gap-4">
             <button className="rounded-full bg-black/40 p-1">
               <ChevronLeft />
