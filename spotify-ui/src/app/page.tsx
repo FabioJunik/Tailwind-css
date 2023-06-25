@@ -3,8 +3,14 @@ import { Footer } from "@/components/Footer"
 import { Sidebar } from "@/components/Sidebar"
 import { AlbumCard } from "@/components/AlbumCard"
 import { MusicCard } from "@/components/MusicCard"
+import { data, MusicProps } from "./data"
 
 export default function Home() {
+  function getMusic(musicId: number) {
+    const musicData = data.music.find(({ id }) => id === musicId)
+
+    return musicData || {} as MusicProps
+  }
   return (
     <div className="h-screen grid grid-rows-[auto,84px]">
       <div className="flex">
@@ -20,21 +26,19 @@ export default function Home() {
           </div>
           <h1 className="font-semibold text-3xl mt-10">Reproduzido recentemente</h1>
           <div className="grid grid-cols-3 gap-4 mt-4">
-            <AlbumCard /> 
-            <AlbumCard /> 
-            <AlbumCard /> 
-            <AlbumCard /> 
-            <AlbumCard /> 
-            <AlbumCard /> 
+            {data.recentlyPlayed.map((id) => {
+              const { image, title } = getMusic(id)
+              return <AlbumCard image={image} title={title} />
+            })}
           </div>
           <h2 className="font-semibold text-2xl mt-10">Feito por Fábio Junik</h2>
           <div className="grid grid-cols-5 gap-4 mt-4">
-            <MusicCard/>
-            <MusicCard/>
-            <MusicCard/>
-            <MusicCard/>
-            <MusicCard/>
-            <MusicCard/>
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
           </div>
         </main>
       </div>
